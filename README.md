@@ -22,22 +22,23 @@
 ## Pretrained Models
 Please download the pretrained models from the following link:
 
-|[StyleGAN](https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/ffhq.pkl) | StyleGAN2-ada model trained on FFHQ with 1024x1024 output resolution.
+|[StyleGAN3](https://drive.google.com/file/d/1dhiPc29Leqq4d1MEx-ZDIFwxJHwgQzn_/view?usp=drive_link) | 
+Pretrained generator model. Fine-tuned on the Market-1501, MSMT17, and CUHK03 datasets.
 
 |[e4e encoder](https://drive.google.com/file/d/1ALC5CLA89Ouw40TwvxcwebhzWXM5YSCm/view?usp=sharing) | Pretrained e4e encoder. Used for StyleCLIP editing.
 
 |[ResNet50 re-ID](https://drive.google.com/file/d/1dUUZ4rHDWohmsQXCRe2C_HbYkzz94iBV/view) | Pretrained ResNet50 re-ID encoder. Used to extract the identity vector of an image.
 
-|[Vector gallery](https://drive.google.com/file/d/1hgzOdP9uLq2lMiVmMOTbnip7ALWSfMBc/view?usp=drive_link) | This is a vector gallery containing 19,732 identity features and latent codes.
+|[Vector gallery](https://drive.google.com/file/d/165pxM2xUcahf85Xdv4_VF5MCBr1vojA2/view?usp=drive_link) | This is a vector gallery containing 19,732 identity features and latent codes.
 
 
 This folder includes:
-- **StyleGAN_ada_reID** (used for image generation from latent codes)  
-- **e4e_reID** (used to extract latent codes that will be stored in the vector store)  
-- **ResNet50-reID** (used to extract identity vectors from original images and for vector store construction)
-- **Vector_store** (It is used for latent code retrieval based on identity features)
+- **StyleGAN3_ada_reID** (used for image generation from latent codes)  
+- **e4e_reID** (used to extract latent codes that will be stored in the vector gallery)  
+- **ResNet50-reID** (used to extract identity features from original images and for vector gallery construction)
+- **Vector gallery** (It is used for latent code retrieval based on identity features)
 
-Note: The StyleGAN model is used directly from the official [stylegan2-ada-pytorch implementation](https://github.com/NVlabs/stylegan2-ada-pytorch).
+Note: The StyleGAN model is used directly from the official [stylegan3-ada-pytorch implementation](https://github.com/NVlabs/stylegan2-ada-pytorch).
 
 By default, it is assumed that all pretrained models are downloaded and stored in the `pretrained_model` directory. 
 However, you can specify your own paths by modifying the relevant values in `configs/path_configs.py`. 
